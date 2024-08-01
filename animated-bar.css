@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(4, 4, 20);
+}
+
+.container {
+    position: relative;
+    width: 470px;
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 10px;
+}
+.skill-box {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.title {
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    color: rgb(45, 43, 43);
+}
+.skill-bar {
+    margin-top: 6px;
+    height: 8px;
+    width: 100%;
+    background-color: rgb(195, 190, 190);
+    border-radius: 10px;
+}
+.skill-per {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+    background-color: blue;
+    animation: progress 0.4s ease-in-out forwards;
+}
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity:1;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+.skill-per.css{
+    width: 70%;
+    animation-delay: 0.1s;
+}
+.skill-per.javascript{
+    width: 50%;
+    animation-delay: 0.2s;
+}
+.skill-per.nodejs{
+    width: 30%;
+    animation-delay: 0.3s;
+}
+
+.tooltip {
+    position: absolute;
+    top: -30px;
+    right: -13px;
+    font-size: 10px;
+    background-color: blue;
+    color: white;
+    padding: 1px 6px;
+    border-radius: 5px;
+    z-index: 1;
+}
+.tooltip::before {
+    content: ' ';
+    background-color: blue;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 15.5px;
+    bottom: -2px;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: -1;
+}
